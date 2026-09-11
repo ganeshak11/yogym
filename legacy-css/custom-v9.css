@@ -1,0 +1,36 @@
+.brand-image {
+    border: 0 !important;
+    background: transparent !important;
+    outline: 0 !important;
+    box-shadow: none !important
+}
+
+.brand-image img {
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important
+}
+
+.made-by {
+    white-space: nowrap
+}
+
+.made-by a {
+    color: var(--bright-gold);
+    text-decoration: none
+}
+
+.made-by a:hover {
+    color: #fff
+}
+
+@media(max-width:900px) {
+    footer {
+        gap: 16px
+    }
+
+    .made-by {
+        order: 3
+    }
+}

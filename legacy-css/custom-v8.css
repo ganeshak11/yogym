@@ -1,0 +1,218 @@
+/* BMI and member-review experience */
+.proof {
+    background: #0b0b0b;
+    color: var(--paper)
+}
+
+.proof-stats {
+    display: none
+}
+
+.bmi-section {
+    padding: 90px clamp(24px, 12vw, 183px);
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 90px;
+    background: linear-gradient(110deg, #111009, #171209)
+}
+
+.bmi-section .eyebrow,
+.bmi-section h2 em {
+    color: var(--gold)
+}
+
+.bmi-section h2 {
+    font-size: clamp(46px, 5vw, 76px);
+    letter-spacing: -.07em;
+    line-height: .94;
+    margin: 0
+}
+
+.bmi-section h2 em {
+    font-family: 'Playfair Display';
+    font-weight: 600
+}
+
+.bmi-section>div>p:not(.eyebrow) {
+    color: #c8bea9;
+    line-height: 1.75;
+    max-width: 370px;
+    margin: 25px 0 0
+}
+
+.bmi-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-content: start
+}
+
+.bmi-form label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .05em;
+    color: var(--bright-gold);
+    text-transform: uppercase
+}
+
+.bmi-form input {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 16px;
+    background: #090909;
+    border: 1px solid #6c572b;
+    color: #fff;
+    font: 16px Manrope
+}
+
+.bmi-form .button {
+    grid-column: span 2;
+    justify-content: center;
+    border: 0;
+    margin-top: 3px
+}
+
+.bmi-result {
+    grid-column: span 2;
+    min-height: 78px;
+    border-left: 2px solid var(--gold);
+    padding: 13px 18px;
+    background: #0007;
+    color: #ded7c9;
+    line-height: 1.55
+}
+
+.bmi-result strong {
+    display: block;
+    font: 600 25px 'Playfair Display';
+    color: var(--bright-gold)
+}
+
+.review-feature {
+    background: linear-gradient(90deg, #080808 37%, #080808d2), url('assets/membership.jpg') left/53% auto no-repeat;
+    min-height: 455px
+}
+
+.review-slider {
+    position: relative;
+    min-height: 230px
+}
+
+.review-slide {
+    display: none
+}
+
+.review-slide.is-active {
+    display: block;
+    animation: review-enter .5s ease
+}
+
+.review-slider blockquote {
+    min-height: 128px
+}
+
+.review-controls {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 20px
+}
+
+.review-controls button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    color: var(--bright-gold);
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform .2s, background .2s
+}
+
+.review-controls button:hover {
+    transform: translateY(-3px) scale(1.1);
+    background: var(--gold);
+    color: #111
+}
+
+.review-index {
+    font: 500 10px 'DM Mono';
+    letter-spacing: .12em;
+    color: #c5aa6a;
+    min-width: 50px;
+    text-align: center
+}
+
+@keyframes review-enter {
+    from {
+        opacity: 0;
+        transform: translateX(18px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.real-gallery {
+    grid-template-columns: repeat(2, 1fr) !important
+}
+
+.real-gallery .gallery-large {
+    grid-column: 1/-1 !important;
+    height: 460px
+}
+
+.real-gallery article:not(.gallery-large) {
+    height: 330px
+}
+
+.membership-grid a[href*="wa.me"] {
+    background: rgba(255, 255, 255, .1) !important;
+    border: 1px solid rgba(231, 206, 136, .6) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: inherit !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .22)
+}
+
+.membership-grid a[href*="wa.me"]:hover {
+    background: rgba(199, 163, 82, .42) !important;
+    border-color: var(--bright-gold) !important
+}
+
+.membership-grid .call-action {
+    background: transparent !important;
+    border: 1px solid rgba(231, 206, 136, .6) !important;
+    color: inherit !important
+}
+
+.membership-grid .call-action:hover {
+    background: var(--gold) !important;
+    color: #111 !important
+}
+
+@media(max-width:800px) {
+    .bmi-section {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        padding: 70px 24px
+    }
+
+    .review-feature {
+        background: #080808;
+        padding-top: 70px;
+        padding-bottom: 70px
+    }
+
+    .real-gallery .gallery-large {
+        height: 330px
+    }
+
+    .real-gallery article:not(.gallery-large) {
+        height: 270px
+    }
+}

@@ -1,0 +1,35 @@
+/* Gold equipment marks for benefits; programme cards stay text-led */
+.benefit-grid .equipment-icon {
+    width: 56px !important;
+    height: 32px !important;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, .45))
+}
+
+.benefit-grid .equipment-icon:before {
+    left: 11px;
+    right: 11px;
+    top: 13px;
+    height: 7px;
+    border-radius: 7px;
+    background: linear-gradient(180deg, #fff0ad 0%, #d9ad48 35%, #815510 72%, #e9c56a 100%);
+    box-shadow: inset 0 1px 2px #fff6
+}
+
+.benefit-grid .equipment-icon:after {
+    left: 0;
+    top: 5px;
+    width: 12px;
+    height: 23px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #6e4509, #d7aa42 32%, #f7dc87 52%, #936218 84%);
+    box-shadow: 44px 0 0 #9e6f1d, 47px 0 0 #efd17a, 5px 2px 0 #f3cf75, 39px 2px 0 #f3cf75
+}
+
+.programme-grid b {
+    display: none !important
+}
+
+.programme-grid h3 {
+    margin-top: 0 !important
+}

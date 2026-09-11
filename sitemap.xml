@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>/public/5.jpeg</image:loc>
+      <image:title>Som Yogym Power Cage and Squat Station</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>/public/4.jpeg</image:loc>
+      <image:title>Som Yogym Free Weights and Dumbbell Suite</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>/public/3.jpeg</image:loc>
+      <image:title>Som Yogym Biomechanics and Strength Machines</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>/public/1.jpeg</image:loc>
+      <image:title>Som Yogym Cardio and Leg Press Floor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>/public/2.jpeg</image:loc>
+      <image:title>Som Yogym Olympic Lifting and Spin Studio</image:title>
+    </image:image>
+  </url>
+</urlset>

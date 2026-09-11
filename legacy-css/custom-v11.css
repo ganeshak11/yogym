@@ -1,0 +1,28 @@
+/* Clean type-only cards: remove all decorative emoji/icon marks */
+.programme-grid b {
+    display: none !important
+}
+
+.programme-grid h3 {
+    margin-top: 0 !important
+}
+
+.benefit-grid .equipment-icon {
+    display: block !important
+}
+
+.benefit-grid h3 {
+    margin-top: 0 !important
+}
+
+.card .icon {
+    display: block !important
+}
+
+.card {
+    padding-top: 20px
+}
+
+.card h3 {
+    margin-top: 0 !important
+}
