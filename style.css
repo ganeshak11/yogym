@@ -40,6 +40,8 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
@@ -48,6 +50,7 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100vw;
   position: relative;
 }
 
@@ -394,8 +397,7 @@ h1 em, h2 em {
 }
 
 .hero-copy {
-  position: relative;
-  z-index: 2;
+  position: static;
   max-width: 580px;
 }
 
@@ -1980,6 +1982,22 @@ blockquote cite {
   font-style: normal;
 }
 
+.motion-link {
+  color: var(--bright-gold);
+  border-bottom-color: var(--gold);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  display: inline-flex;
+  transition: var(--transition-smooth);
+}
+
+.motion-link:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+  transform: translateX(4px);
+}
+
 .pose-stage {
   position: relative;
   display: grid;
@@ -2185,11 +2203,15 @@ footer p, footer a {
     padding: 90px clamp(20px, 5vw, 60px);
   }
   .hero {
-    padding: 140px clamp(20px, 5vw, 60px) 80px;
+    padding: 130px clamp(20px, 5vw, 60px) 70px;
   }
   .hero-art {
-    width: 58%;
-    right: -2%;
+    width: 56%;
+    right: -1%;
+  }
+  .method-grid, .membership-heading, .why-layout, .classes, .contact-full, .bmi-section, .studio, .review-feature, .yoga-motion {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
   .masonry-gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -2212,10 +2234,6 @@ footer p, footer a {
   .benefit-grid, .programme-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .why-layout, .classes, .contact-full, .bmi-section, .studio, .review-feature, .yoga-motion {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
   .studio-photo {
     min-height: 360px;
   }
@@ -2226,7 +2244,8 @@ footer p, footer a {
 
 @media (max-width: 820px) {
   .nav {
-    height: 76px;
+    height: 72px;
+    padding: 0 20px;
   }
   .nav-links, .nav-cta {
     display: none;
@@ -2236,31 +2255,83 @@ footer p, footer a {
   }
   .hero {
     min-height: auto;
-    padding: 120px 20px 80px;
+    padding: 110px 20px 50px;
+    position: relative;
   }
   .hero-copy {
+    position: relative;
     max-width: 100%;
+    width: 100%;
   }
   .hero h1 {
-    font-size: clamp(40px, 10vw, 64px);
+    font-size: clamp(38px, 9.5vw, 58px);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero-intro {
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 18px;
+    max-width: 100%;
   }
   .hero-art {
     position: relative;
     width: 100%;
-    height: 320px;
-    right: 0;
-    top: 0;
-    margin: 40px 0 20px;
+    max-width: 360px;
+    height: 240px;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin: 14px auto 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .dumbbell {
+    width: min(320px, 86%);
+    filter: drop-shadow(15px 25px 20px rgba(0, 0, 0, .4));
+  }
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
     width: 100%;
+  }
+  .hero-actions .button {
+    width: 100%;
+    justify-content: center;
+    padding: 15px 20px;
+    text-align: center;
+  }
+  .hero-actions .text-link {
+    align-self: center;
+    justify-content: center;
+    margin-top: 6px;
   }
   .hero-side, .hero-bottom p {
     display: none;
   }
+  .hero-bottom {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin-top: 36px;
+    padding-top: 16px;
+    width: 100%;
+    border-top: 1px solid var(--border-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .method-grid, .membership-heading {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
   .cards {
     grid-template-columns: 1fr;
-    margin-top: 50px;
+    margin-top: 40px;
   }
   .masonry-gallery {
     grid-template-columns: 1fr;
@@ -2275,8 +2346,35 @@ footer p, footer a {
     grid-row: span 1;
     height: 280px;
   }
+  .gallery-actions-bar {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  .gallery-actions-bar .button {
+    width: 100%;
+    justify-content: center;
+  }
   .membership-grid.membership-duration {
     grid-template-columns: 1fr;
+  }
+  .membership-services article, .membership-duration article {
+    padding: 28px 20px;
+  }
+  .pricing-card-actions {
+    width: 100%;
+    gap: 10px;
+  }
+  .plan-btn {
+    padding: 10px 8px;
+    font-size: 10.5px;
+  }
+  .lightbox-close {
+    top: 10px;
+    right: 10px;
+    background: rgba(10, 10, 12, 0.85);
+    border-color: var(--gold);
+    z-index: 30;
   }
   .lightbox-prev, .lightbox-next {
     display: none;
@@ -2288,35 +2386,85 @@ footer p, footer a {
     padding: 16px 20px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 10px;
   }
   .form-actions {
     flex-direction: column;
+    gap: 12px;
+  }
+  .form-actions .button {
+    width: 100%;
+    justify-content: center;
   }
   footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
+    padding: 48px 20px;
+  }
+  .whatsapp-float {
+    right: 18px;
+    bottom: 18px;
+    width: 50px;
+    height: 50px;
+    padding: 11px;
   }
 }
 
 @media (max-width: 580px) {
   .section {
-    padding: 70px 20px;
+    padding: 60px 18px;
+  }
+  .method-text .button {
+    width: 100%;
+    justify-content: center;
   }
   .benefit-grid, .programme-grid {
     grid-template-columns: 1fr;
+  }
+  .benefit-grid article {
+    min-height: auto;
+    padding: 22px 18px;
   }
   .bmi-form {
     grid-template-columns: 1fr;
   }
   .bmi-form .button, .bmi-result {
     grid-column: span 1;
+    width: 100%;
+  }
+  .bmi-form .button {
+    justify-content: center;
   }
   .class-row {
     grid-template-columns: 36px 1fr 28px;
   }
   .class-row p {
     display: none;
+  }
+  .contact-card, .enquiry {
+    padding: 26px 18px;
+  }
+  .plan-btn {
+    font-size: 10px;
+    padding: 10px 8px;
+  }
+  .review-slider blockquote {
+    font-size: clamp(18px, 4.8vw, 22px);
+    padding: 8px 0 8px 18px;
+    min-height: auto;
+  }
+  .pose-stage {
+    min-height: 360px;
+  }
+  .pose-stage img {
+    max-height: 320px;
+  }
+  .motion-caption {
+    padding: 40px 18px 16px;
+  }
+  .yoga-quote {
+    font-size: clamp(26px, 6.5vw, 36px);
+    margin-bottom: 20px;
   }
 }
