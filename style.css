@@ -71,14 +71,33 @@ img {
 
 /* --- Typography Utilities --- */
 .eyebrow {
-  font: 500 11px var(--font-mono);
+  font: 600 11px var(--font-mono);
   letter-spacing: .18em;
   text-transform: uppercase;
   display: inline-flex;
   gap: 12px;
   align-items: center;
   margin-bottom: 20px;
-  color: var(--gold);
+  color: var(--bronze);
+}
+
+.hero .eyebrow,
+.classes .eyebrow,
+.membership-full .eyebrow {
+  color: var(--bronze);
+}
+
+.method .eyebrow,
+.studio-copy .eyebrow,
+.why .eyebrow,
+.programmes-intro .eyebrow,
+.bmi-section .eyebrow,
+.review-feature .eyebrow,
+.gallery .eyebrow,
+.contact-full .eyebrow,
+.enquiry .eyebrow,
+.yoga-motion .eyebrow {
+  color: var(--bright-gold);
 }
 
 .eyebrow i {
@@ -415,7 +434,8 @@ h1 em, h2 em {
 .hero-intro {
   font-size: clamp(15px, 1.2vw, 17px);
   line-height: 1.75;
-  color: #3f392f;
+  color: #1e1b16;
+  font-weight: 500;
   margin: 0 0 36px;
   max-width: 440px;
 }
@@ -710,9 +730,14 @@ h1 em, h2 em {
 }
 
 .card p {
-  font-size: 13px;
+  font-size: 13.5px;
+  line-height: 1.55;
   margin: 0 0 16px;
-  opacity: .85;
+  opacity: 1;
+}
+
+.card-dark p {
+  color: #ded7c9;
 }
 
 .card a {
@@ -779,10 +804,10 @@ h1 em, h2 em {
 }
 
 .class-row span, .class-row p {
-  font: 500 11px var(--font-mono);
+  font: 700 11px var(--font-mono);
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: #6a6150;
+  color: #2b251a;
 }
 
 .class-row h3 {
@@ -914,7 +939,7 @@ h1 em, h2 em {
 .why-layout > div > p:not(.eyebrow) {
   font-size: 16px;
   line-height: 1.75;
-  color: #bfb7a4;
+  color: #ded7c9;
   margin-bottom: 34px;
   max-width: 340px;
 }
@@ -981,9 +1006,9 @@ h1 em, h2 em {
 }
 
 .benefit-grid p {
-  font-size: 13px;
+  font-size: 13.5px;
   line-height: 1.6;
-  color: #b0a897;
+  color: #ded7c9;
 }
 
 /* --- Complete Curriculum / Programmes (#programmes) --- */
@@ -1013,7 +1038,7 @@ h1 em, h2 em {
 }
 
 .programmes-intro > p:last-child {
-  color: #9f9aa6;
+  color: #ded7c9;
   font-size: 16px;
 }
 
@@ -1042,9 +1067,9 @@ h1 em, h2 em {
 }
 
 .programme-grid span {
-  font: 600 10px var(--font-mono);
+  font: 700 10px var(--font-mono);
   letter-spacing: .14em;
-  color: var(--gold);
+  color: var(--bright-gold);
   text-transform: uppercase;
   margin-bottom: 12px;
 }
@@ -1059,7 +1084,7 @@ h1 em, h2 em {
 .programme-grid p {
   font-size: 13.5px;
   line-height: 1.6;
-  color: #a8a2af;
+  color: #ded7c9;
   margin-top: auto;
 }
 
@@ -1088,7 +1113,7 @@ h1 em, h2 em {
 }
 
 .bmi-section > div > p:not(.eyebrow) {
-  color: #bfb7a4;
+  color: #ded7c9;
   line-height: 1.75;
   font-size: 15px;
   max-width: 380px;
@@ -1152,7 +1177,7 @@ h1 em, h2 em {
 
 .bmi-result span {
   font-size: 13.5px;
-  color: #a8a2af;
+  color: #ede7db;
   line-height: 1.6;
 }
 
@@ -1263,7 +1288,7 @@ blockquote cite {
 .gallery-intro {
   font-size: 16px;
   line-height: 1.75;
-  color: #aba4b5;
+  color: #ded7c9;
   max-width: 680px;
 }
 
@@ -1496,7 +1521,7 @@ blockquote cite {
 
 .lightbox-desc {
   font-size: 14px;
-  color: #a8a2af;
+  color: #ded7c9;
 }
 
 .lightbox-counter {
@@ -1593,7 +1618,8 @@ blockquote cite {
 .membership-heading > p {
   font-size: 16px;
   line-height: 1.75;
-  color: #554d3e;
+  color: #231f18;
+  font-weight: 500;
 }
 
 .membership-label {
@@ -1655,7 +1681,8 @@ blockquote cite {
 
 .membership-duration article > span {
   font-size: 13.5px;
-  color: #6a6150;
+  color: #231f18;
+  font-weight: 600;
   margin-bottom: 30px;
   line-height: 1.5;
 }
@@ -1669,7 +1696,7 @@ blockquote cite {
 }
 
 .membership-duration .popular .duration-tag {
-  color: var(--gold);
+  color: var(--bright-gold);
 }
 
 .membership-duration .popular > p,
@@ -1678,7 +1705,8 @@ blockquote cite {
 }
 
 .membership-duration .popular > span {
-  color: #cfc7b4;
+  color: #e5dfd2;
+  font-weight: 500;
 }
 
 .popular-badge {
@@ -1731,7 +1759,7 @@ blockquote cite {
 
 .membership-services p {
   font-size: 14px;
-  color: #aba4b5;
+  color: #ded7c9;
   line-height: 1.6;
   margin-bottom: 24px;
 }
@@ -1750,8 +1778,8 @@ blockquote cite {
 }
 
 .price-tier small {
-  font: 400 13px var(--font-sans);
-  color: #9f9aa6;
+  font: 600 13px var(--font-sans);
+  color: var(--bright-gold);
 }
 
 /* Card Bottom Actions (WhatsApp + Call Dual Buttons) */
@@ -1876,9 +1904,13 @@ blockquote cite {
 }
 
 .enquiry > p:not(.eyebrow) {
-  color: #a8a2af;
+  color: #ded7c9;
   font-size: 15px;
   margin-bottom: 8px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #9891a0;
 }
 
 .enquiry label {
